@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Aditya Pratama - Visual Communication Design Graduate specializing in Graphic Design, UI/UX, Video Editing, and 3D Generalist work.">
+  <meta name="keywords" content="Visual Communication Design, Graphic Designer, UI/UX Designer, Video Editor, 3D Generalist, Portfolio, Behance, Aditya Pratama">
+  <meta name="author" content="Aditya Pratama">
+  <meta name="theme-color" content="#0A0A0A">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aditya Pratama — Visual Communication Designer & 3D Artist">
+  <meta property="og:description" content="Multidisciplinary portfolio spanning Graphic Design, UI/UX, Motion Video, and 3D Generalist work.">
+
+  <title>ADITYA PRATAMA — Creative Designer & 3D Artist</title>
+
+  <!-- Google Fonts: Space Grotesk & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="loading">
+  <!-- Subtle Grain / Noise Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Custom Cursor Elements -->
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-circle" id="cursor-circle" aria-hidden="true"></div>
+
+  <!-- =========================================================================
+       1. LOADING SCREEN
+       ========================================================================= -->
+  <aside id="preloader" class="preloader" aria-label="Loading screen">
+    <div class="preloader__inner">
+      <div class="preloader__top">
+        <span class="preloader__tag">[ PORTFOLIO SYSTEM 2026 ]</span>
+        <span class="preloader__status" id="preloader-status">INITIALIZING ASSETS</span>
+      </div>
+      
+      <div class="preloader__center">
+        <div class="preloader__number-wrapper">
+          <span class="preloader__counter" id="preloader-counter">0</span>
+          <span class="preloader__percent">%</span>
+        </div>
+        <div class="preloader__name-box">
+          <h1 class="preloader__title">ADITYA PRATAMA</h1>
+          <p class="preloader__subtitle">VISUAL COMMUNICATION DESIGN GRADUATE</p>
+        </div>
+      </div>
+
+      <div class="preloader__bottom">
+        <div class="preloader__bar">
+          <div class="preloader__progress" id="preloader-bar"></div>
+        </div>
+        <div class="preloader__meta">
+          <span>GRAPHIC DESIGN</span>
+          <span>UI/UX</span>
+          <span>VIDEO EDITING</span>
+          <span>3D GENERALIST</span>
+        </div>
+      </div>
+    </div>
+    <!-- Curtains for reveal animation -->
+    <div class="preloader__curtain preloader__curtain--left"></div>
+    <div class="preloader__curtain preloader__curtain--right"></div>
+  </aside>
+
+  <!-- =========================================================================
+       2. NAVIGATION
+       ========================================================================= -->
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main Navigation">
+      <a href="#hero" class="nav__logo" aria-label="Aditya Pratama Home">
+        <span class="nav__logo-brand">ADITYA<span class="accent-dot">.</span>P</span>
+        <span class="nav__logo-role">DKV // 2026</span>
+      </a>
+
+      <!-- Desktop Menu Items -->
+      <ul class="nav__menu" id="nav-menu">
+        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="#works" class="nav__link">Works</a></li>
+        <li class="nav__item"><a href="#featured" class="nav__link">Featured</a></li>
+        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+        <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+
+      <!-- Action items: Theme Toggle & CTA -->
+      <div class="nav__actions">
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Switch Theme">
+          <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="#contact" class="btn btn--nav magnetic-btn">
+          <span>Let's Talk</span>
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+
+        <!-- Hamburger Button for Mobile -->
+        <button class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu__inner container">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item"><a href="#hero" class="mobile-menu__link">00 // Home</a></li>
+          <li class="mobile-menu__item"><a href="#about" class="mobile-menu__link">01 // About</a></li>
+          <li class="mobile-menu__item"><a href="#works" class="mobile-menu__link">02 // Selected Works</a></li>
+          <li class="mobile-menu__item"><a href="#featured" class="mobile-menu__link">03 // Featured Archive</a></li>
+          <li class="mobile-menu__item"><a href="#skills" class="mobile-menu__link">04 // Skills & Tools</a></li>
+          <li class="mobile-menu__item"><a href="#experience" class="mobile-menu__link">05 // Experience</a></li>
+          <li class="mobile-menu__item"><a href="#contact" class="mobile-menu__link">06 // Contact</a></li>
+        </ul>
+        <div class="mobile-menu__footer">
+          <div class="mobile-menu__meta">
+            <span class="mono-label">BASED IN JAKARTA, ID</span>
+            <span class="mono-label">AVAILABLE WORLDWIDE</span>
+          </div>
+          <div class="mobile-menu__socials">
+            <a href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- =========================================================================
+         3. HERO SECTION
+         ========================================================================= -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <!-- Interactive Ambient Canvas for dynamic particle/grid motion -->
+      <canvas id="hero-canvas" class="hero__canvas" aria-hidden="true"></canvas>
+
+      <div class="container hero__content">
+        <!-- Eyebrow Badge -->
+        <div class="hero__eyebrow reveal-fade">
+          <span class="status-indicator"></span>
+          <span class="mono-tag">AVAILABLE FOR SELECT PROJECTS · 2026</span>
+          <span class="hero__badge-divider">/</span>
+          <span class="mono-tag">S1 DKV GRADUATE</span>
+        </div>
+
+        <!-- Giant Headline -->
+        <div class="hero__title-wrapper">
+          <h1 class="hero__title">
+            <span class="hero__title-line hero__title-line--primary reveal-text">
+              <span class="title-char">C</span><span class="title-char">R</span><span class="title-char">E</span><span class="title-char">A</span><span class="title-char">T</span><span class="title-char">I</span><span class="title-char">V</span><span class="title-char">E</span>
+            </span>
+            <span class="hero__title-line hero__title-line--outline reveal-text">
+              <span class="title-char">D</span><span class="title-char">E</span><span class="title-char">S</span><span class="title-char">I</span><span class="title-char">G</span><span class="title-char">N</span><span class="title-char">E</span><span class="title-char">R</span>
+            </span>
+          </h1>
+        </div>
+
+        <!-- Subtitle & Disciplines -->
+        <div class="hero__info-grid">
+          <div class="hero__discipline-pills reveal-fade" style="--delay: 0.3s">
+            <span class="pill">Visual Communication Design</span>
+            <span class="pill">Graphic Design</span>
+            <span class="pill">UI/UX</span>
+            <span class="pill">Video Editing</span>
+            <span class="pill">3D Generalist</span>
+          </div>
+
+          <p class="hero__tagline reveal-fade" style="--delay: 0.45s">
+            Crafting high-impact visual identities, visceral motion sequences, and intuitive spatial 3D systems. Merging academic visual communication rigor with modern digital aesthetics.
+          </p>
+
+          <div class="hero__cta-group reveal-fade" style="--delay: 0.6s">
+            <a href="#works" class="btn btn--primary magnetic-btn">
+              <span>Explore Selected Works</span>
+              <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn--secondary magnetic-btn">
+              <span>Get In Touch</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator Animation -->
+      <a href="#about" class="hero__scroll-indicator" aria-label="Scroll down to About section">
+        <div class="mouse-icon">
+          <span class="mouse-wheel"></span>
+        </div>
+        <span class="scroll-text">SCROLL TO EXPLORE</span>
+        <svg class="scroll-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </a>
+
+      <!-- Decorative Coordinates / Meta -->
+      <div class="hero__decor hero__decor--left mono-label">DKV.SPEC // MULTIDISCIPLINARY</div>
+      <div class="hero__decor hero__decor--right mono-label">LAT 6.2088° S · LON 106.8456° E</div>
+    </section>
+
+    <!-- =========================================================================
+         4. ABOUT SECTION
+         ========================================================================= -->
+    <section class="section about" id="about" aria-label="About Aditya Pratama">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal-fade">
+          <div class="section-header__tag">
+            <span class="mono-tag">[ 01 // ABOUT ]</span>
+          </div>
+          <h2 class="section-header__title">DESIGN WITH PURPOSE, DEPTH & DIMENSION</h2>
+        </div>
+
+        <div class="about__grid">
+          <!-- Left: Styled Portrait Frame Placeholder -->
+          <div class="about__media reveal-slide-right">
+            <div class="about__frame">
+              <div class="about__avatar-card">
+                <!-- Abstract visual placeholder with initials -->
+                <div class="about__avatar-visual">
+                  <div class="avatar-gradient-orb"></div>
+                  <div class="avatar-grid-matrix"></div>
+                  <div class="avatar-monogram">AP</div>
+                  <div class="avatar-crosshair avatar-crosshair--tl">+</div>
+                  <div class="avatar-crosshair avatar-crosshair--tr">+</div>
+                  <div class="avatar-crosshair avatar-crosshair--bl">+</div>
+                  <div class="avatar-crosshair avatar-crosshair--br">+</div>
+                </div>
+                
+                <div class="about__avatar-caption">
+                  <div class="avatar-badge">
+                    <span class="badge-dot"></span>
+                    <span>ADITYA PRATAMA, S.Ds</span>
+                  </div>
+                  <span class="avatar-sub">DKV HONORS GRADUATE</span>
+                </div>
+              </div>
+
+              <!-- Floating aesthetic tags -->
+              <div class="about__floating-tag about__floating-tag--one">
+                <span class="tag-icon">✦</span>
+                <span>Visual Strategist</span>
+              </div>
+              <div class="about__floating-tag about__floating-tag--two">
+                <span class="tag-icon">◈</span>
+                <span>3D & Spatial Designer</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Narrative Bio & Metrics -->
+          <div class="about__content reveal-slide-left">
+            <h3 class="about__headline">
+              Translating complex ideas into resonant visual stories across screens, prints, and virtual environments.
+            </h3>
+            
+            <div class="about__bio-paragraphs">
+              <p>
+                As a graduate in <strong>Visual Communication Design (DKV)</strong>, I fuse academic foundational design principles—semiotics, color harmony, typography theory, and compositional hierarchy—with cutting-edge 3D rendering and motion synthesis.
+              </p>
+              <p>
+                Over the past 5+ years, I have navigated brand identity systems, interactive UI/UX interfaces, cinematic video edits, and procedural 3D environments for startups, creative agencies, and global clients. I believe compelling design is not purely aesthetic; it is an orchestrated sensory experience.
+              </p>
+            </div>
+
+            <!-- Highlights / Statistics Counters -->
+            <div class="about__stats">
+              <div class="stat-item" data-count="5" data-suffix="+">
+                <span class="stat-number"><span class="counter-val">0</span><span class="stat-suffix">+</span></span>
+                <span class="stat-label">Years of Craft & Studio Experience</span>
+              </div>
+              <div class="stat-item" data-count="60" data-suffix="+">
+                <span class="stat-number"><span class="counter-val">0</span><span class="stat-suffix">+</span></span>
+                <span class="stat-label">Delivered Projects Across Disciplines</span>
+              </div>
+              <div class="stat-item" data-count="25" data-suffix="+">
+                <span class="stat-number"><span class="counter-val">0</span><span class="stat-suffix">+</span></span>
+                <span class="stat-label">Satisfied International & Local Clients</span>
+              </div>
+              <div class="stat-item" data-count="100" data-suffix="%">
+                <span class="stat-number"><span class="counter-val">0</span><span class="stat-suffix">%</span></span>
+                <span class="stat-label">Dedication to Creative Precision</span>
+              </div>
+            </div>
+
+            <!-- Action button for CV / Collab -->
+            <div class="about__action">
+              <a href="#contact" class="btn btn--primary magnetic-btn">
+                <span>Start a Collaboration</span>
+                <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="#skills" class="btn btn--secondary magnetic-btn">
+                <span>View Technical Stack</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. WORKS / PROJECTS SECTION
+         ========================================================================= -->
+    <section class="section works" id="works" aria-label="Selected Works">
+      <div class="container">
+        <!-- Section Header with Filters -->
+        <div class="section-header works__header reveal-fade">
+          <div class="section-header__tag">
+            <span class="mono-tag">[ 02 // SELECTED WORKS ]</span>
+          </div>
+          <h2 class="section-header__title">PORTFOLIO INDEX</h2>
+          <p class="section-header__subtitle">
+            Curated archive of brand design, digital products, cinematic edits, and 3D worlds.
+          </p>
+
+          <!-- Filter Navigation Tabs -->
+          <div class="works__filters" role="tablist" aria-label="Filter projects by discipline">
+            <button class="filter-btn active magnetic-btn" data-filter="all" role="tab" aria-selected="true">
+              <span>All Works</span>
+              <span class="filter-count">8</span>
+            </button>
+            <button class="filter-btn magnetic-btn" data-filter="graphic" role="tab" aria-selected="false">
+              <span>Graphic Design</span>
+              <span class="filter-count">2</span>
+            </button>
+            <button class="filter-btn magnetic-btn" data-filter="uiux" role="tab" aria-selected="false">
+              <span>UI/UX</span>
+              <span class="filter-count">2</span>
+            </button>
+            <button class="filter-btn magnetic-btn" data-filter="video" role="tab" aria-selected="false">
+              <span>Video Editing</span>
+              <span class="filter-count">2</span>
+            </button>
+            <button class="filter-btn magnetic-btn" data-filter="3d" role="tab" aria-selected="false">
+              <span>3D Generalist</span>
+              <span class="filter-count">2</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Projects Grid (8 Projects: 2 per category) -->
+        <div class="works__grid" id="projects-grid">
+          
+          <!-- PROJECT 1: Graphic Design -->
+          <article class="project-card tilt-card" data-category="graphic" data-project-id="p1">
+            <div class="project-card__media">
+              <!-- Visual placeholder with customized aesthetic geometry -->
+              <div class="project-card__placeholder project-card__placeholder--graphic-1">
+                <div class="card-deco-grid"></div>
+                <div class="card-badge-category">BRAND IDENTITY</div>
+                <div class="card-center-icon">
+                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                    <circle cx="50" cy="50" r="38" stroke-width="1.5" stroke-dasharray="4 4" />
+                    <rect x="25" y="25" width="50" height="50" stroke-width="2" />
+                    <line x1="25" y1="25" x2="75" y2="75" stroke-width="1.5" />
+                  </svg>
+                </div>
+                <span class="card-project-num">01 / GD</span>
+              </div>
+
+              <!-- Overlay shown on hover / tap -->
+              <div class="project-card__overlay">
+                <span class="overlay-tag">CASE STUDY</span>
+                <span class="overlay-cta">Explore Project &rarr;</span>
+              </div>
+            </div>
+
+            <div class="project-card__content">
+              <div class="project-card__meta">
+                <span class="project-card__category">GRAPHIC DESIGN</span>
+                <span class="project-card__year">2025</span>
+              </div>
+              <h3 class="project-card__title">Aetheria Brand System</h3>
+              <p class="project-card__desc">
+                Comprehensive visual identity, bespoke typography and editorial brand guide for an avant-garde architectural atelier.
+              </p>
+              <div class="project-card__tags">
+                <span class="card-tag">Brand Strategy</span>
+                <span class="card-tag">Typography</span>
+                <span class="card-tag">Editorial</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: UI/UX -->
+          <article class="project-card tilt-card" data-category="uiux" data-project-id="p2">
+            <div class="project-card__media">
+              <div class="project-card__placeholder project-card__placeholder--uiux-1">
+                <div class="card-deco-grid"></div>
+                <div class="card-badge-category">FINTECH PLATFORM</div>
+                <div class="card-center-icon">
+                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                    <rect x="15" y="20" width="70" height="60" rx="8" stroke-width="2" />
+                    <line x1="15" y1="36" x2="85" y2="36" stroke-width="1.5" />
+                    <circle cx="28" cy="28" r="3" fill="currentColor" />
+                    <circle cx="38" cy="28" r="3" fill="currentColor" />
+                    <rect x="25" y="48" width="22" height="20" rx="4" stroke-width="1.5" />
+                    <rect x="53" y="48" width="22" height="12" rx="4" stroke-width="1.5" />
+                  </svg>
+                </div>
+                <span class="card-project-num">02 / UI</span>
+              </div>
+
+              <div class="project-card__overlay">
+                <span class="overlay-tag">CASE STUDY</span>
+                <span class="overlay-cta">Explore Project &rarr;</span>
+              </div>
+            </div>
+
+            <div class="project-card__content">
+              <div class="project-card__meta">
+                <span class="project-card__category">UI/UX DESIGN</span>
+                <span class="project-card__year">2026</span>
+              </div>
+              <h3 class="project-card__title">Kronos Wealth OS</h3>
+              <p class="project-card__desc">
+                Next-generation algorithmic wealth management iOS companion and web trading terminal with intuitive dark mode data visualization.
+              </p>
+              <div class="project-card__tags">
+                <span class="card-tag">Fintech</span>
+                <span class="card-tag">Mobile App</span>
+                <span class="card-tag">Design System</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: Video Editing -->
+          <article class="project-card tilt-card" data-category="video" data-project-id="p3">
+            <div class="project-card__media">
+              <div class="project-card__placeholder project-card__placeholder--video-1">
+                <div class="card-deco-grid"></div>
+                <div class="card-badge-category">CINEMATIC REEL</div>
+                <div class="card-center-icon">
+                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                    <polygon points="40,30 75,50 40,70" stroke-width="2" fill="rgba(196,163,90,0.15)" />
+                    <circle cx="50" cy="50" r="42" stroke-width="1.5" stroke-dasharray="6 3" />
+                  </svg>
+                </div>
+                <span class="card-project-num">03 / VD</span>
+              </div>
+
+              <div class="project-card__overlay">
+                <span class="overlay-tag">CASE STUDY</span>
+                <span class="overlay-cta">Explore Project &rarr;</span>
+              </div>
+            </div>
+
+            <div class="project-card__content">
+              <div class="project-card__meta">
+                <span class="project-card__category">VIDEO EDITING & MOTION</span>
+                <span class="project-card__year">2025</span>
+              </div>
+              <h3 class="project-card__title">Chrono Motion Film</h3>
+              <p class="project-card__desc">
+                High-octane commercial brand reel featuring dynamic speed ramps, soundscape synthesis, and custom DaVinci color grade.
+              </p>
+              <div class="project-card__tags">
+                <span class="card-tag">Color Grading</span>
+                <span class="card-tag">Sound Design</span>
+                <span class="card-tag">Premiere Pro</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4: 3D Generalist -->
+          <article class="project-card tilt-card" data-category="3d" data-project-id="p4">
+            <div class="project-card__media">
+              <div class="project-card__placeholder project-card__placeholder--3d-1">
+                <div class="card-deco-grid"></div>
+                <div class="card-badge-category">3D SCULPT & RENDER</div>
+                <div class="card-center-icon">
+                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                    <polygon points="50,15 85,35 85,75 50,95 15,75 15,35" stroke-width="2" />
+                    <line x1="50" y1="15" x2="50" y2="55" stroke-width="1.5" />
+                    <line x1="50" y1="55" x2="85" y2="75" stroke-width="1.5" />
+                    <line x1="50" y1="55" x2="15" y2="75" stroke-width="1.5" />
+                  </svg>
+                </div>
+                <span class="card-project-num">04 / 3D</span>
+              </div>
+
+              <div class="project-card__overlay">
+                <span class="overlay-tag">CASE STUDY</span>
+                <span class="overlay-cta">Explore Project &rarr;</span>
+              </div>
+            </div>
+
+            <div class="project-card__content">
+              <div class="project-card__meta">
+                <span class="project-card__category">3D GENERALIST</span>
+                <span class="project-card__year">2026</span>
+              </div>
+              <h3 class="project-card__title">Cybernetic Artifacts</h3>
+              <p class="project-card__desc">
+                Hard-surface procedural modeling series exploring futuristic relic aesthetics, realistic Octane micro-scratches, and studio lighting.
+              </p>
+              <div class="project-card__tags">
+                <span class="card-tag">Blender</span>
+                <span class="card-tag">Octane Render</span>
+                <span class="card-tag">Hard Surface</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 5: Graphic Design -->
+          <article class="project-card tilt-card" data-category="graphic" data-project-id="p5">
+            <div class="project-card__media">
+              <div class="project-card__placeholder project-card__placeholder--graphic-2">
+                <div class="card-deco-grid"></div>
+                <div class="card-badge-category">POSTER SERIES</div>
+                <div class="card-center-icon">
+                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                    <rect x="22" y="15" width="56" height="70" stroke-width="2" />
+                    <line x1="30" y1="30" x2="70" y2="30" stroke-width="4" />
+                    <line x1="30" y1="42" x2="60" y2="42" stroke-width="2" />
+                    <circle cx="50" cy="62" r="14" stroke-width="1.5" />
+                  </svg>
+                </div>
+                <span class="card-project-num">05 / GD</span>
+              </div>
+
+              <div class="project-card__overlay">
+                <span class="overlay-tag">CASE STUDY</span>
+                <span class="overlay-cta">Explore Project &rarr;</span>
+              </div>
+            </div>
+
+            <div class="project-card__content">
+              <div class="project-card__meta">
+                <span class="project-card__category">GRAPHIC DESIGN</span>
+                <span class="project-card__year">2025</span>
+              </div>
+              <h3 class="project-card__title">Neo-Kyoto Poster Reel</h3>
+              <p class="project-card__desc">
+                Experimental typography and Swiss-grid risograph poster exhibition examining brutalist architecture and neo-noir typography.
+              </p>
+              <div class="project-card__tags">
+                <span class="card-tag">Typography</span>
+                <span class="card-tag">Print Media</span>
+                <span class="card-tag">Exhibition</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 6: UI/UX -->
+          <article class="project-card tilt-card" data-category="uiux" data-project-id="p6">
+            <div class="project-card__media">
+              <div class="project-card__placeholder project-card__placeholder--uiux-2">
+                <div class="card-deco-grid"></div>
+                <div class="card-badge-category">DESIGN SYSTEM</div>
+                <div class="card-center-icon">
+                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                    <circle cx="35" cy="35" r="16" stroke-width="2" />
+                    <circle cx="65" cy="35" r="16" stroke-width="2" />
+                    <circle cx="50" cy="65" r="16" stroke-width="2" />
+                  </svg>
+                </div>
+                <span class="card-project-num">06 / UI</span>
+              </div>
+
+              <div class="project-card__overlay">
+                <span class="overlay-tag">CASE STUDY</span>
+                <span class="overlay-cta">Explore Project &rarr;</span>
+              </div>
+            </div>
+
+            <div class="project-card__content">
+              <div class="project-card__meta">
+                <span class="project-card__category">UI/UX DESIGN</span>
+                <span class="project-card__year">2025</span>
+              </div>
+              <h3 class="project-card__title">Lumen Design System</h3>
+              <p class="project-card__desc">
+                Comprehensive tokenized design architecture covering 140+ components, WCAG AAA accessibility, and dark/light themes for enterprise web.
+              </p>
+              <div class="project-card__tags">
+                <span class="card-tag">Figma Tokens</span>
+                <span class="card-tag">Accessibility</span>
+                <span class="card-tag">Component Library</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 7: Video Editing -->
+          <article class="project-card tilt-card" data-category="video" data-project-id="p7">
+            <div class="project-card__media">
+              <div class="project-card__placeholder project-card__placeholder--video-2">
+                <div class="card-deco-grid"></div>
+                <div class="card-badge-category">MUSIC VISUALS</div>
+                <div class="card-center-icon">
+                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                    <line x1="20" y1="50" x2="20" y2="50" stroke-width="4" stroke-linecap="round" />
+                    <line x1="32" y1="35" x2="32" y2="65" stroke-width="4" stroke-linecap="round" />
+                    <line x1="44" y1="20" x2="44" y2="80" stroke-width="4" stroke-linecap="round" />
+                    <line x1="56" y1="30" x2="56" y2="70" stroke-width="4" stroke-linecap="round" />
+                    <line x1="68" y1="40" x2="68" y2="60" stroke-width="4" stroke-linecap="round" />
+                    <line x1="80" y1="46" x2="80" y2="54" stroke-width="4" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <span class="card-project-num">07 / VD</span>
+              </div>
+
+              <div class="project-card__overlay">
+                <span class="overlay-tag">CASE STUDY</span>
+                <span class="overlay-cta">Explore Project &rarr;</span>
+              </div>
+            </div>
+
+            <div class="project-card__content">
+              <div class="project-card__meta">
+                <span class="project-card__category">VIDEO EDITING & MOTION</span>
+                <span class="project-card__year">2026</span>
+              </div>
+              <h3 class="project-card__title">Soundwave Dynamics</h3>
+              <p class="project-card__desc">
+                Kinetic typography, 3D camera projection, and beat-matched visual pacing for an electronic music artist's single release.
+              </p>
+              <div class="project-card__tags">
+                <span class="card-tag">After Effects</span>
+                <span class="card-tag">Kinetic Type</span>
+                <span class="card-tag">VFX</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 8: 3D Generalist -->
+          <article class="project-card tilt-card" data-category="3d" data-project-id="p8">
+            <div class="project-card__media">
+              <div class="project-card__placeholder project-card__placeholder--3d-2">
+                <div class="card-deco-grid"></div>
+                <div class="card-badge-category">ENVIRONMENT ART</div>
+                <div class="card-center-icon">
+                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                    <circle cx="50" cy="50" r="32" stroke-width="2" />
+                    <path d="M22 62 Q50 30 78 62" stroke-width="1.5" />
+                    <ellipse cx="50" cy="50" rx="44" ry="14" stroke-width="1.5" stroke-dasharray="4 2" />
+                  </svg>
+                </div>
+                <span class="card-project-num">08 / 3D</span>
+              </div>
+
+              <div class="project-card__overlay">
+                <span class="overlay-tag">CASE STUDY</span>
+                <span class="overlay-cta">Explore Project &rarr;</span>
+              </div>
+            </div>
+
+            <div class="project-card__content">
+              <div class="project-card__meta">
+                <span class="project-card__category">3D GENERALIST</span>
+                <span class="project-card__year">2025</span>
+              </div>
+              <h3 class="project-card__title">Solaris Biosphere</h3>
+              <p class="project-card__desc">
+                Procedurally generated alien planetary biome featuring photorealistic volumetric lighting, node-based shaders, and cinematic camera passes.
+              </p>
+              <div class="project-card__tags">
+                <span class="card-tag">Cinema 4D</span>
+                <span class="card-tag">Redshift</span>
+                <span class="card-tag">Environment</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. FEATURED PROJECTS HORIZONTAL SCROLL
+         ========================================================================= -->
+    <section class="section featured" id="featured" aria-label="Featured Projects Horizontal Showcase">
+      <div class="container featured__header-row">
+        <div class="section-header reveal-fade">
+          <div class="section-header__tag">
+            <span class="mono-tag">[ 03 // FEATURED SHOWCASE ]</span>
+          </div>
+          <h2 class="section-header__title">SIGNATURE DIRECTIVES</h2>
+          <p class="section-header__subtitle">
+            Immersive case studies spotlighting multidisciplinary synergy.
+          </p>
+        </div>
+
+        <!-- Navigation Controls for Horizontal Scroll -->
+        <div class="featured__controls">
+          <button class="ctrl-btn magnetic-btn" id="feat-prev" aria-label="Previous featured project">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button class="ctrl-btn magnetic-btn" id="feat-next" aria-label="Next featured project">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Horizontal Track Wrapper -->
+      <div class="featured__track-container" id="featured-track-container">
+        <div class="featured__track" id="featured-track">
+          
+          <!-- FEATURED CARD 1 -->
+          <div class="featured__card" data-project-id="p-feat-1">
+            <div class="featured__card-visual featured__card-visual--one">
+              <div class="feat-badge">SPATIAL UI / 3D</div>
+              <div class="feat-graphic-center">
+                <div class="feat-halo"></div>
+                <span class="feat-code">PROJECT // OMEGA</span>
+              </div>
+            </div>
+            <div class="featured__card-body">
+              <div class="feat-meta">
+                <span class="feat-tag">INTERACTIVE WEB & 3D</span>
+                <span class="feat-year">2026</span>
+              </div>
+              <h3 class="feat-title">Project Omega: Spatial Interface Engine</h3>
+              <p class="feat-description">
+                A radical spatial web experience merging WebGL interactive models with responsive editorial design for an automotive manufacturer's next-gen electric flagship.
+              </p>
+              <div class="feat-specs">
+                <div class="feat-spec-item">
+                  <span class="spec-label">Role</span>
+                  <span class="spec-val">Lead 3D & UI Designer</span>
+                </div>
+                <div class="feat-spec-item">
+                  <span class="spec-label">Tools</span>
+                  <span class="spec-val">Blender · Three.js · Figma</span>
+                </div>
+              </div>
+              <button class="btn btn--secondary btn--sm open-modal-btn" data-target="p-feat-1">
+                <span>View Full Showcase</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- FEATURED CARD 2 -->
+          <div class="featured__card" data-project-id="p-feat-2">
+            <div class="featured__card-visual featured__card-visual--two">
+              <div class="feat-badge">OMNICHANNEL BRANDING</div>
+              <div class="feat-graphic-center">
+                <div class="feat-halo"></div>
+                <span class="feat-code">VORTEX // IDENTITY</span>
+              </div>
+            </div>
+            <div class="featured__card-body">
+              <div class="feat-meta">
+                <span class="feat-tag">BRAND SYSTEM & MOTION</span>
+                <span class="feat-year">2025</span>
+              </div>
+              <h3 class="feat-title">Vortex: 360° Dynamic Brand Universe</h3>
+              <p class="feat-description">
+                Holistic brand revitalization for a music tech company, incorporating generative typography, 3D packaging mockups, and modular brand guidelines.
+              </p>
+              <div class="feat-specs">
+                <div class="feat-spec-item">
+                  <span class="spec-label">Role</span>
+                  <span class="spec-val">Brand Identity & Motion</span>
+                </div>
+                <div class="feat-spec-item">
+                  <span class="spec-label">Tools</span>
+                  <span class="spec-val">Illustrator · After Effects · Cinema 4D</span>
+                </div>
+              </div>
+              <button class="btn btn--secondary btn--sm open-modal-btn" data-target="p-feat-2">
+                <span>View Full Showcase</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- FEATURED CARD 3 -->
+          <div class="featured__card" data-project-id="p-feat-3">
+            <div class="featured__card-visual featured__card-visual--three">
+              <div class="feat-badge">CGI CINEMATIC</div>
+              <div class="feat-graphic-center">
+                <div class="feat-halo"></div>
+                <span class="feat-code">NEBULA // MOTION</span>
+              </div>
+            </div>
+            <div class="featured__card-body">
+              <div class="feat-meta">
+                <span class="feat-tag">VFX & CINEMATICS</span>
+                <span class="feat-year">2025</span>
+              </div>
+              <h3 class="feat-title">Nebula: Sci-Fi Narrative Trailer</h3>
+              <p class="feat-description">
+                Directorial debut in CGI storytelling featuring photoreal cosmos simulations, particle dynamics, and custom Foley audio mastering.
+              </p>
+              <div class="feat-specs">
+                <div class="feat-spec-item">
+                  <span class="spec-label">Role</span>
+                  <span class="spec-val">Director · 3D Generalist · Editor</span>
+                </div>
+                <div class="feat-spec-item">
+                  <span class="spec-label">Tools</span>
+                  <span class="spec-val">Blender · Premiere · DaVinci Resolve</span>
+                </div>
+              </div>
+              <button class="btn btn--secondary btn--sm open-modal-btn" data-target="p-feat-3">
+                <span>View Full Showcase</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- FEATURED CARD 4 -->
+          <div class="featured__card" data-project-id="p-feat-4">
+            <div class="featured__card-visual featured__card-visual--four">
+              <div class="feat-badge">RADICAL PRODUCT UI</div>
+              <div class="feat-graphic-center">
+                <div class="feat-halo"></div>
+                <span class="feat-code">AURA // PLATFORM</span>
+              </div>
+            </div>
+            <div class="featured__card-body">
+              <div class="feat-meta">
+                <span class="feat-tag">PRODUCT DESIGN & DESIGN OPS</span>
+                <span class="feat-year">2026</span>
+              </div>
+              <h3 class="feat-title">Aura Mobile OS: Neomorphic UI Suite</h3>
+              <p class="feat-description">
+                Experimental operating system interface built on subtle depth, micro-interactions, haptic feedback patterns, and accessible dark themes.
+              </p>
+              <div class="feat-specs">
+                <div class="feat-spec-item">
+                  <span class="spec-label">Role</span>
+                  <span class="spec-val">Product Designer</span>
+                </div>
+                <div class="feat-spec-item">
+                  <span class="spec-label">Tools</span>
+                  <span class="spec-val">Figma · Principle · Protopie</span>
+                </div>
+              </div>
+              <button class="btn btn--secondary btn--sm open-modal-btn" data-target="p-feat-4">
+                <span>View Full Showcase</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Scroll Progress Bar -->
+      <div class="container">
+        <div class="featured__progress-track">
+          <div class="featured__progress-bar" id="featured-progress-bar"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. SKILLS SECTION
+         ========================================================================= -->
+    <section class="section skills" id="skills" aria-label="Technical Skills and Creative Toolset">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal-fade">
+          <div class="section-header__tag">
+            <span class="mono-tag">[ 04 // CAPABILITIES & TOOLS ]</span>
+          </div>
+          <h2 class="section-header__title">TECHNICAL RIGOR & ARTISTIC MASTERY</h2>
+          <p class="section-header__subtitle">
+            Disciplines sharpened by formal design education and high-demand commercial pipelines.
+          </p>
+        </div>
+
+        <!-- Four Key Skill Category Columns with Animated Meters -->
+        <div class="skills__grid">
+          
+          <!-- Category 1: Graphic Design -->
+          <div class="skill-category-card reveal-slide-up" style="--delay: 0.1s">
+            <div class="skill-category-header">
+              <span class="skill-cat-icon">✦</span>
+              <h3 class="skill-cat-title">Graphic & Brand Design</h3>
+            </div>
+            <p class="skill-cat-desc">
+              Visual identity systems, typography architecture, packaging, and high-fidelity print production.
+            </p>
+            <div class="skill-bars-list">
+              <div class="skill-bar-item" data-proficiency="95">
+                <div class="skill-bar-info">
+                  <span class="skill-name">Brand Identity & Systems</span>
+                  <span class="skill-percent">95%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="--width: 95%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item" data-proficiency="90">
+                <div class="skill-bar-info">
+                  <span class="skill-name">Typography & Editorial Layout</span>
+                  <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="--width: 90%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item" data-proficiency="88">
+                <div class="skill-bar-info">
+                  <span class="skill-name">Packaging & Print Pre-press</span>
+                  <span class="skill-percent">88%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="--width: 88%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: UI/UX Design -->
+          <div class="skill-category-card reveal-slide-up" style="--delay: 0.2s">
+            <div class="skill-category-header">
+              <span class="skill-cat-icon">❖</span>
+              <h3 class="skill-cat-title">UI/UX & Digital Product</h3>
+            </div>
+            <p class="skill-cat-desc">
+              User journey mapping, wireframing, design systems, interactive prototypes, and usability testing.
+            </p>
+            <div class="skill-bars-list">
+              <div class="skill-bar-item" data-proficiency="92">
+                <div class="skill-bar-info">
+                  <span class="skill-name">UI Design & Micro-interactions</span>
+                  <span class="skill-percent">92%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="--width: 92%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item" data-proficiency="90">
+                <div class="skill-bar-info">
+                  <span class="skill-name">Design Systems & Tokens</span>
+                  <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="--width: 90%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item" data-proficiency="85">
+                <div class="skill-bar-info">
+                  <span class="skill-name">UX Research & User Journeys</span>
+                  <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="--width: 85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Video Editing -->
+          <div class="skill-category-card reveal-slide-up" style="--delay: 0.3s">
+            <div class="skill-category-header">
+              <span class="skill-cat-icon">►</span>
+              <h3 class="skill-cat-title">Video Editing & Motion</h3>
+            </div>
+            <p class="skill-cat-desc">
+              Pacing, commercial cutting, dynamic motion graphics, DaVinci color management, and sound design.
+            </p>
+            <div class="skill-bars-list">
+              <div class="skill-bar-item" data-proficiency="90">
+                <div class="skill-bar-info">
+                  <span class="skill-name">Narrative & Commercial Editing</span>
+                  <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="--width: 90%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item" data-proficiency="88">
+                <div class="skill-bar-info">
+                  <span class="skill-name">Motion Graphics & Kinetic Type</span>
+                  <span class="skill-percent">88%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="--width: 88%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item" data-proficiency="84">
+                <div class="skill-bar-info">
+                  <span class="skill-name">Color Grading (ACES / DaVinci)</span>
+                  <span class="skill-percent">84%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="--width: 84%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: 3D Generalist -->
+          <div class="skill-category-card reveal-slide-up" style="--delay: 0.4s">
+            <div class="skill-category-header">
+              <span class="skill-cat-icon">⬡</span>
+              <h3 class="skill-cat-title">3D Generalist & CGI</h3>
+            </div>
+            <p class="skill-cat-desc">
+              Hard surface modeling, environment design, procedural node shaders, lighting, and camera staging.
+            </p>
+            <div class="skill-bars-list">
+              <div class="skill-bar-item" data-proficiency="88">
+                <div class="skill-bar-info">
+                  <span class="skill-name">Hard Surface & Asset Modeling</span>
+                  <span class="skill-percent">88%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="--width: 88%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item" data-proficiency="85">
+                <div class="skill-bar-info">
+                  <span class="skill-name">Texturing, Shading & Lighting</span>
+                  <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="--width: 85%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item" data-proficiency="80">
+                <div class="skill-bar-info">
+                  <span class="skill-name">Simulation & Camera Direction</span>
+                  <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="--width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Software & Tools Interactive Badge Deck -->
+        <div class="tools-deck reveal-fade">
+          <div class="tools-deck__title">
+            <span class="mono-tag">CORE APPLICATION TOOLKIT</span>
+          </div>
+
+          <div class="tools-deck__grid">
+            <!-- Adobe Photoshop -->
+            <div class="tool-badge magnetic-btn" title="Adobe Photoshop — Advanced Retouching & Composite">
+              <div class="tool-badge__code">Ps</div>
+              <div class="tool-badge__name">Photoshop</div>
+              <div class="tool-badge__level">Mastery</div>
+            </div>
+
+            <!-- Adobe Illustrator -->
+            <div class="tool-badge magnetic-btn" title="Adobe Illustrator — Vector Identity & Type Systems">
+              <div class="tool-badge__code">Ai</div>
+              <div class="tool-badge__name">Illustrator</div>
+              <div class="tool-badge__level">Mastery</div>
+            </div>
+
+            <!-- Adobe InDesign -->
+            <div class="tool-badge magnetic-btn" title="Adobe InDesign — Editorial & Grid Layouts">
+              <div class="tool-badge__code">Id</div>
+              <div class="tool-badge__name">InDesign</div>
+              <div class="tool-badge__level">Proficient</div>
+            </div>
+
+            <!-- Figma -->
+            <div class="tool-badge magnetic-btn" title="Figma — Design Systems & UI Prototyping">
+              <div class="tool-badge__code">Fg</div>
+              <div class="tool-badge__name">Figma</div>
+              <div class="tool-badge__level">Expert</div>
+            </div>
+
+            <!-- Premiere Pro -->
+            <div class="tool-badge magnetic-btn" title="Adobe Premiere Pro — Video Editing & Pacing">
+              <div class="tool-badge__code">Pr</div>
+              <div class="tool-badge__name">Premiere Pro</div>
+              <div class="tool-badge__level">Expert</div>
+            </div>
+
+            <!-- After Effects -->
+            <div class="tool-badge magnetic-btn" title="Adobe After Effects — Motion Graphics & Compositing">
+              <div class="tool-badge__code">Ae</div>
+              <div class="tool-badge__name">After Effects</div>
+              <div class="tool-badge__level">Expert</div>
+            </div>
+
+            <!-- DaVinci Resolve -->
+            <div class="tool-badge magnetic-btn" title="DaVinci Resolve — Advanced Color Grading & Finishing">
+              <div class="tool-badge__code">Dv</div>
+              <div class="tool-badge__name">DaVinci</div>
+              <div class="tool-badge__level">Proficient</div>
+            </div>
+
+            <!-- Blender -->
+            <div class="tool-badge magnetic-btn" title="Blender 3D — Modeling, Cycles & EEVEE">
+              <div class="tool-badge__code">Bl</div>
+              <div class="tool-badge__name">Blender</div>
+              <div class="tool-badge__level">Expert</div>
+            </div>
+
+            <!-- Cinema 4D -->
+            <div class="tool-badge magnetic-btn" title="Maxon Cinema 4D — Mograph & Redshift">
+              <div class="tool-badge__code">C4D</div>
+              <div class="tool-badge__name">Cinema 4D</div>
+              <div class="tool-badge__level">Proficient</div>
+            </div>
+
+            <!-- Autodesk Maya -->
+            <div class="tool-badge magnetic-btn" title="Autodesk Maya — 3D Asset Topology & Staging">
+              <div class="tool-badge__code">My</div>
+              <div class="tool-badge__name">Maya</div>
+              <div class="tool-badge__level">Intermediate</div>
+            </div>
+
+            <!-- HTML5 & Modern CSS -->
+            <div class="tool-badge magnetic-btn" title="Semantic HTML5 & Modern CSS">
+              <div class="tool-badge__code">&lt;/&gt;</div>
+              <div class="tool-badge__name">HTML / CSS</div>
+              <div class="tool-badge__level">Fluent</div>
+            </div>
+
+            <!-- Photography -->
+            <div class="tool-badge magnetic-btn" title="Digital Photography & Lighting Setup">
+              <div class="tool-badge__code">Ph</div>
+              <div class="tool-badge__name">Photography</div>
+              <div class="tool-badge__level">Advanced</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. EXPERIENCE & EDUCATION SECTION
+         ========================================================================= -->
+    <section class="section experience" id="experience" aria-label="Experience and Education Timeline">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal-fade">
+          <div class="section-header__tag">
+            <span class="mono-tag">[ 05 // CHRONOLOGY ]</span>
+          </div>
+          <h2 class="section-header__title">EXPERIENCE & EDUCATION</h2>
+          <p class="section-header__subtitle">
+            A track record of professional growth, collaborative projects, and foundational academic rigor.
+          </p>
+        </div>
+
+        <!-- Vertical Timeline Container -->
+        <div class="timeline">
+          <div class="timeline__line" aria-hidden="true"></div>
+
+          <!-- Entry 1 -->
+          <div class="timeline__item timeline__item--left reveal-slide-right">
+            <div class="timeline__node" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__period">
+                <span class="period-badge">2024 — PRESENT</span>
+                <span class="period-type">LEADERSHIP</span>
+              </div>
+              <h3 class="timeline__role">Senior Art Director & 3D Artist</h3>
+              <h4 class="timeline__company">Studio Vertex · Tokyo / Remote</h4>
+              <p class="timeline__text">
+                Directing multidisciplinary creative teams across visual branding, 3D commercial product assets, and interactive spatial websites. Established cohesive design pipelines that accelerated production turnover by 35%.
+              </p>
+              <div class="timeline__tags">
+                <span>Art Direction</span>
+                <span>3D Spatial</span>
+                <span>Team Leadership</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Entry 2 -->
+          <div class="timeline__item timeline__item--right reveal-slide-left">
+            <div class="timeline__node" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__period">
+                <span class="period-badge">2022 — 2024</span>
+                <span class="period-type">PRODUCT</span>
+              </div>
+              <h3 class="timeline__role">Lead UI/UX & Motion Designer</h3>
+              <h4 class="timeline__company">Kinetic Digital Labs · Jakarta, ID</h4>
+              <p class="timeline__text">
+                Spearheaded product design and micro-interaction prototypes for high-growth tech platforms. Designed enterprise design systems adopted across iOS, Android, and web touchpoints.
+              </p>
+              <div class="timeline__tags">
+                <span>UI/UX</span>
+                <span>Design Systems</span>
+                <span>Motion Prototyping</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Entry 3 -->
+          <div class="timeline__item timeline__item--left reveal-slide-right">
+            <div class="timeline__node" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__period">
+                <span class="period-badge">2021 — 2022</span>
+                <span class="period-type">AGENCY</span>
+              </div>
+              <h3 class="timeline__role">Graphic Designer & Video Editor</h3>
+              <h4 class="timeline__company">Monolith Creative Agency · Jakarta, ID</h4>
+              <p class="timeline__text">
+                Authored visual identities, social media campaigns, print collateral, and video commercials for retail, lifestyle, and food & beverage brands. Mastered fast-paced campaign delivery.
+              </p>
+              <div class="timeline__tags">
+                <span>Graphic Design</span>
+                <span>Commercial Video</span>
+                <span>Brand Collateral</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Entry 4: Education -->
+          <div class="timeline__item timeline__item--right reveal-slide-left">
+            <div class="timeline__node timeline__node--edu" aria-hidden="true"></div>
+            <div class="timeline__card timeline__card--edu">
+              <div class="timeline__period">
+                <span class="period-badge period-badge--gold">2018 — 2022</span>
+                <span class="period-type period-type--gold">DEGREE // ACADEMIC</span>
+              </div>
+              <h3 class="timeline__role">S1 Desain Komunikasi Visual (S.Ds)</h3>
+              <h4 class="timeline__company">Universitas Multimedia Nusantara / Top Design Faculty</h4>
+              <p class="timeline__text">
+                Bachelor of Visual Communication Design with Honors. Specialization in New Media, Interactive Design, and Brand Strategy. Thesis awarded distinction for research on 3D spatial typography in augmented environments.
+              </p>
+              <div class="timeline__tags">
+                <span>Visual Communication</span>
+                <span>Typography Theory</span>
+                <span>Semiotics & Media</span>
+                <span>Cum Laude</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. CONTACT SECTION
+         ========================================================================= -->
+    <section class="section contact" id="contact" aria-label="Contact and Inquiries">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal-fade">
+          <div class="section-header__tag">
+            <span class="mono-tag">[ 06 // INQUIRIES & COLLABORATION ]</span>
+          </div>
+          <h2 class="section-header__title">LET'S CREATE SOMETHING EXTRAORDINARY</h2>
+          <p class="section-header__subtitle">
+            Whether you need a holistic brand system, an intuitive UI/UX product, an arresting video edit, or bespoke 3D worlds—I'm ready to bring vision to reality.
+          </p>
+        </div>
+
+        <div class="contact__grid">
+          <!-- Left: Direct Info & Social Connections -->
+          <div class="contact__info reveal-slide-right">
+            <div class="contact__status-pill">
+              <span class="status-indicator"></span>
+              <span>Available for Select Client Projects & Full-time Roles</span>
+            </div>
+
+            <div class="contact__quick-links">
+              <div class="contact-card">
+                <span class="contact-card__label">DIRECT EMAIL</span>
+                <div class="contact-card__action-row">
+                  <a href="mailto:aditya.pratama.design@gmail.com" class="contact-card__value" id="email-address">
+                    aditya.pratama.design@gmail.com
+                  </a>
+                  <button class="copy-btn magnetic-btn" id="copy-email-btn" title="Copy email address to clipboard" aria-label="Copy email">
+                    <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></line>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span class="copy-tooltip" id="copy-tooltip">Copy</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="contact-card">
+                <span class="contact-card__label">LOCATION & BASE</span>
+                <span class="contact-card__value">Jakarta, Indonesia (UTC+7) · Available Worldwide Remote</span>
+              </div>
+            </div>
+
+            <!-- Social Media Hub -->
+            <div class="contact__socials">
+              <span class="contact__socials-label mono-tag">CONNECT ON CREATIVE PLATFORMS</span>
+              <div class="social-links-grid">
+                <!-- Behance -->
+                <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="social-pill magnetic-btn">
+                  <span class="social-name">Behance</span>
+                  <span class="social-tag">Portfolio</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+                <!-- Instagram -->
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-pill magnetic-btn">
+                  <span class="social-name">Instagram</span>
+                  <span class="social-tag">Visual Log</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-pill magnetic-btn">
+                  <span class="social-name">LinkedIn</span>
+                  <span class="social-tag">Network</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+                <!-- Dribbble -->
+                <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="social-pill magnetic-btn">
+                  <span class="social-name">Dribbble</span>
+                  <span class="social-tag">Shots</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Contact Form -->
+          <div class="contact__form-wrapper reveal-slide-left">
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-name" class="form-label">YOUR NAME *</label>
+                  <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Maya Thorne" required>
+                  <span class="form-error" id="name-error">Please provide your name</span>
+                </div>
+                <div class="form-group">
+                  <label for="form-email" class="form-label">EMAIL ADDRESS *</label>
+                  <input type="email" id="form-email" name="email" class="form-input" placeholder="maya@company.com" required>
+                  <span class="form-error" id="email-error">Please provide a valid email</span>
+                </div>
+              </div>
+
+              <!-- Service Chips -->
+              <div class="form-group">
+                <label class="form-label">SERVICE NEEDED</label>
+                <div class="chips-group" id="chips-group">
+                  <label class="chip">
+                    <input type="checkbox" name="services" value="graphic">
+                    <span>Graphic & Brand</span>
+                  </label>
+                  <label class="chip">
+                    <input type="checkbox" name="services" value="uiux">
+                    <span>UI/UX Product</span>
+                  </label>
+                  <label class="chip">
+                    <input type="checkbox" name="services" value="video">
+                    <span>Video & Motion</span>
+                  </label>
+                  <label class="chip">
+                    <input type="checkbox" name="services" value="3d">
+                    <span>3D & CGI</span>
+                  </label>
+                  <label class="chip">
+                    <input type="checkbox" name="services" value="full">
+                    <span>Full Direction</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Budget Range Select -->
+              <div class="form-group">
+                <label for="form-budget" class="form-label">ESTIMATED BUDGET (USD)</label>
+                <select id="form-budget" name="budget" class="form-input form-select">
+                  <option value="1k-3k">$1,000 — $3,000</option>
+                  <option value="3k-5k">$3,000 — $5,000</option>
+                  <option value="5k-10k" selected>$5,000 — $10,000</option>
+                  <option value="10k+">$10,000+</option>
+                  <option value="discussion">Open for discussion</option>
+                </select>
+              </div>
+
+              <!-- Message Textarea -->
+              <div class="form-group">
+                <label for="form-message" class="form-label">PROJECT DETAILS & OBJECTIVES *</label>
+                <textarea id="form-message" name="message" class="form-input form-textarea" rows="4" placeholder="Describe the scope, timeline, and goals of your project..." required></textarea>
+                <span class="form-error" id="message-error">Please share some project details</span>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="form-actions">
+                <button type="submit" class="btn btn--primary btn--full magnetic-btn" id="submit-btn">
+                  <span class="btn-text">Transmit Proposal</span>
+                  <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Success Alert Message -->
+              <div class="form-success-banner" id="form-success" aria-live="polite">
+                <div class="success-icon">✓</div>
+                <div class="success-content">
+                  <h4>Message Received!</h4>
+                  <p>Thank you for reaching out. I typically review and respond to new briefs within 24 hours.</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       10. FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <span class="footer__logo">ADITYA PRATAMA</span>
+          <p class="footer__desc">
+            Visual Communication Design Graduate · Multidisciplinary Creator
+          </p>
+        </div>
+
+        <div class="footer__time-widget">
+          <span class="mono-tag">CURRENT LOCAL TIME</span>
+          <div class="time-display" id="local-time-display">
+            <span class="time-city">JAKARTA (UTC+7):</span>
+            <span class="time-clock" id="live-clock">--:--:--</span>
+          </div>
+        </div>
+
+        <div class="footer__back-to-top">
+          <button class="back-to-top-btn magnetic-btn" id="back-to-top" aria-label="Back to top of page">
+            <span>BACK TO APEX</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="19" x2="12" y2="5"></line>
+              <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="footer__divider"></div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          &copy; <span id="current-year">2026</span> Aditya Pratama. Crafted with pure HTML, CSS & Vanilla JS.
+        </p>
+
+        <ul class="footer__links">
+          <li><a href="#hero">Index</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       PROJECT DETAILS MODAL DIALOG
+       ========================================================================= -->
+  <div class="modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal__backdrop" id="modal-backdrop"></div>
+    <div class="modal__dialog">
+      <button class="modal__close-btn magnetic-btn" id="modal-close-btn" aria-label="Close project modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal__content" id="modal-content">
+        <!-- Content injected dynamically via JavaScript -->
+        <div class="modal__header">
+          <div class="modal__meta">
+            <span class="modal__category" id="modal-category">CATEGORY</span>
+            <span class="modal__year" id="modal-year">YEAR</span>
+          </div>
+          <h2 class="modal__title" id="modal-title">Project Title</h2>
+        </div>
+
+        <div class="modal__visual" id="modal-visual">
+          <!-- Styled preview box -->
+        </div>
+
+        <div class="modal__body">
+          <div class="modal__section">
+            <h3 class="modal__section-heading">PROJECT OVERVIEW</h3>
+            <p id="modal-desc" class="modal__desc"></p>
+          </div>
+
+          <div class="modal__details-grid">
+            <div class="detail-box">
+              <span class="detail-title">DISCIPLINE</span>
+              <span class="detail-value" id="modal-discipline">Visual Design</span>
+            </div>
+            <div class="detail-box">
+              <span class="detail-title">TOOLS USED</span>
+              <span class="detail-value" id="modal-tools">Figma, Blender</span>
+            </div>
+            <div class="detail-box">
+              <span class="detail-title">DELIVERABLES</span>
+              <span class="detail-value" id="modal-deliverables">Design System, Guidelines</span>
+            </div>
+            <div class="detail-box">
+              <span class="detail-title">ROLE</span>
+              <span class="detail-value" id="modal-role">Creative Lead</span>
+            </div>
+          </div>
+
+          <div class="modal__section">
+            <h3 class="modal__section-heading">DESIGN CHALLENGE & SOLUTION</h3>
+            <p id="modal-solution" class="modal__solution"></p>
+          </div>
+
+          <div class="modal__actions">
+            <a href="#contact" class="btn btn--primary magnetic-btn" id="modal-cta">
+              <span>Commission Similar Work</span>
+            </a>
+            <button class="btn btn--secondary magnetic-btn" id="modal-dismiss">
+              <span>Back to Portfolio</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
