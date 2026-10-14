@@ -1,6 +1,6 @@
 /**
  * ============================================================================
- * ADITYA PRATAMA — VISUAL COMMUNICATION DESIGN PORTFOLIO 2026
+ * ADITYA FAZAR SANJAYA — 3D VISUALIZATION & DIGITAL CONTENT CREATION
  * MAIN CONTROLLER SCRIPT (main.js)
  * Implements: Preloader, Custom Cursor, Magnetic Effects, 3D Card Tilt,
  * Scroll Reveals, Horizontal Archive Scroll, Filter System, Modal Dialog,
@@ -442,139 +442,139 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalCloseBtn = document.getElementById('modal-close-btn');
   const modalDismissBtn = document.getElementById('modal-dismiss');
 
-  // Case study database
+  // Case study database matching Aditya Fazar Sanjaya's authentic CV
   const projectDatabase = {
     p1: {
-      title: 'Aetheria Brand System',
-      category: 'GRAPHIC DESIGN',
-      year: '2025',
-      discipline: 'Visual Identity & Editorial',
-      tools: 'Photoshop · Illustrator · InDesign',
-      deliverables: 'Brand Manual, Custom Font, Stationery, Signage',
-      role: 'Lead Visual Designer',
-      desc: 'Aetheria is an avant-garde architectural atelier based in Kyoto and Zurich. The objective was to craft a monolithic yet delicate visual identity system that mirrored their spatial philosophy: concrete solidity juxtaposed with ethereal natural light.',
-      solution: 'Developed a bespoke typographic system featuring sharp high-contrast serif headlines paired with modular geometric grids. Created tactile print collateral using blind debossing, cotton rag stock, and sustainable metallic foil accents.'
+      title: 'Digital Twin NTU WP3',
+      category: '3D & AR/VR',
+      year: '2024',
+      discipline: 'Digital Twin & Research Visualization',
+      tools: 'Blender · Unity · Unreal Engine',
+      deliverables: '3D Digital Twin Assets, Engine Integration, Research Pipeline',
+      role: '3D Artist Intern (SCCIC ITB)',
+      desc: 'Responsible for accurate and high-detail 3D asset visualization for the Digital Twin NTU WP3 research initiative at the Smart City & Community Innovation Center (SCCIC ITB).',
+      solution: 'Modeled functional spatial geometries in Blender and integrated assets into Unity and Unreal Engine pipelines, ensuring research data was represented with scientific accuracy and real-time performance.'
     },
     p2: {
-      title: 'Kronos Wealth OS',
-      category: 'UI/UX DESIGN',
-      year: '2026',
-      discipline: 'Fintech & Mobile Product Design',
-      tools: 'Figma · Protopie · Cinema 4D',
-      deliverables: 'iOS Design System, Web Terminal, Micro-interactions',
-      role: 'Product Designer & Design Ops',
-      desc: 'Kronos is an algorithmic wealth management platform catering to modern private investors. The challenge was converting complex portfolio variance, high-frequency yield data, and risk metrics into an effortlessly legible, serene interface.',
-      solution: 'Architected a modular dashboard with customizable data widgets, dark-mode-first contrast ratios meeting WCAG AAA compliance, and haptic feedback triggers for trade execution. Accelerated user task completion by 42%.'
+      title: 'Indonesian Warship AR System',
+      category: '3D & AR/VR',
+      year: '2023',
+      discipline: 'Augmented Reality & Naval Visualization',
+      tools: 'Blender · AR Engine · PBR Pipeline',
+      deliverables: 'Functional 3D Warship Assets, Interactive AR Deployment, Optimized Topology',
+      role: 'Freelance 3D Artist (LPPM STMIK AMIK Bandung)',
+      desc: 'Designed and produced functional, scale-accurate 3D assets for a large-scale Augmented Reality project visualizing the Indonesian Naval Warship (Kapal Perang Indonesia) for LPPM STMIK AMIK Bandung.',
+      solution: 'Engineered clean hard-surface geometry with low draw-calls to enable smooth mobile AR projection while preserving essential architectural details and armament configurations.'
     },
     p3: {
-      title: 'Chrono Motion Film',
-      category: 'VIDEO EDITING & MOTION',
-      year: '2025',
-      discipline: 'Commercial Editing & Color Grade',
-      tools: 'Premiere Pro · DaVinci Resolve · After Effects',
-      deliverables: '90s Hero Film, Social Cutdowns, Sound Mix',
-      role: 'Director, Editor & Colorist',
-      desc: 'A fast-paced commercial brand film created for a sustainable performance outerwear line. Shot on location across volcanic terrains and urban skylines, requiring seamless cross-environment continuity.',
-      solution: 'Employed rhythmic match cuts, dynamic time remapping, and an ACES color management pipeline that brought out rich earthy tones against deep slate shadows. Engineered custom binaural sound design for visceral immersion.'
+      title: 'Metaverse Balai Kota Bandung & Dago Dipatiukur',
+      category: '3D & AR/VR',
+      year: '2023',
+      discipline: 'Metaverse Development & Urban Digital Twin',
+      tools: 'Blender · Unreal Engine · Unity',
+      deliverables: 'Phase 1 & 2 Civic Assets, Real-Time Interactive Environment, Prototype Simulation',
+      role: 'Lead 3D Artist & Metaverse Researcher',
+      desc: 'Served as the core 3D Artist in the Metaverse Balai Kota Bandung research project (Phase 1 & 2) and the Dago Dipatiukur Ganesha Digital Twin research prototype for SCCIC ITB.',
+      solution: 'Managed full pipeline from spatial photogrammetry to polygonal modeling, texturing, and engine optimization, transforming civic urban research data into immersive virtual environments.'
     },
     p4: {
-      title: 'Cybernetic Artifacts',
-      category: '3D GENERALIST',
-      year: '2026',
-      discipline: 'Hard Surface 3D & Procedural Art',
-      tools: 'Blender · Octane Render · Substance Painter',
-      deliverables: '12 Digital Sculptures, Animation Loops, 8K Textures',
-      role: '3D Concept Artist & Shading Specialist',
-      desc: 'An exploratory series investigating speculative technological relics unearthed in a post-human era. Focus was placed on extreme micro-detail, functional mechanical logic, and realistic material degradation.',
-      solution: 'Constructed intricate procedural displacement maps and custom micro-roughness shaders in Octane. Simulated realistic anisotropic metal reflections and dust accumulation layers, rendered at photorealistic fidelity.'
+      title: 'Urbansolv Integrated 3D & Brand Identity',
+      category: 'VISUAL & BRAND DESIGN',
+      year: '2025',
+      discipline: '3D Generalist & Creative Coordination',
+      tools: 'Blender · Illustrator · Presentation Decks',
+      deliverables: '3D Project Visualizations, Brand Presentation Decks, Instagram Content',
+      role: 'Senior 3D Generalist & Creative Coordinator',
+      desc: 'Key coordinator for Urbansolv creative team, driving production and management of corporate visual assets, pitch decks, and Instagram branding content under Lead direction.',
+      solution: 'Produced professional 3D visual renders for enterprise projects, coordinated internal and social documentation, and designed UI foundations during an impactful 10-month tenure.'
     },
     p5: {
-      title: 'Neo-Kyoto Poster Reel',
-      category: 'GRAPHIC DESIGN',
-      year: '2025',
-      discipline: 'Experimental Print & Typography',
-      tools: 'Illustrator · Photoshop · Risograph',
-      deliverables: '10 Exhibition Prints, Catalog Book, Augmented Reality AR',
-      role: 'Art Director & Typographer',
-      desc: 'An exhibition poster series investigating brutalist urbanism and kanji-latin typographic synthesis. Explored traditional Japanese woodblock composition principles filtered through dystopian cyber-industrial aesthetics.',
-      solution: 'Utilized multi-pass spot neon risograph printing combined with custom variable glyphs. Integrated WebAR triggers allowing gallery visitors to animate the static posters in real-time through their mobile devices.'
+      title: 'Interactive AR: Story of Malin Kundang',
+      category: '3D & AR/VR',
+      year: '2023',
+      discipline: 'Cultural Heritage & Augmented Reality',
+      tools: 'Blender · Unity · AR Frameworks',
+      deliverables: 'Interactive AR Environment, Character Models, Storyboard Animation',
+      role: '3D Artist & AR Experience Designer',
+      desc: 'A mobile Augmented Reality cultural initiative bringing the classic Indonesian folklore "Story of Malin Kundang" into an engaging, educational 3D spatial format.',
+      solution: 'Created character and environmental 3D models with optimized polygon budgets for smooth mobile performance, incorporating interactive touch triggers to animate narrative chapters.'
     },
     p6: {
-      title: 'Lumen Design System',
-      category: 'UI/UX DESIGN',
+      title: 'Bandung Creative Hub Magazine & Media',
+      category: 'DIGITAL CONTENT',
       year: '2025',
-      discipline: 'Enterprise Design Systems',
-      tools: 'Figma Tokens · Storybook · HTML/CSS',
-      deliverables: '140+ Components, Guidelines, Interactive Sandbox',
-      role: 'Design System Architect',
-      desc: 'An enterprise-scale multi-brand design system unified across four subsidiary applications, accommodating millions of active daily enterprise users.',
-      solution: 'Standardized global design tokens across color, spacing, elevation, and motion curves. Established comprehensive accessibility documentation, zero-regressions component variants, and an automated Figma-to-code synchronizer.'
+      discipline: 'Editorial Photography & Visual Media',
+      tools: 'Digital Photography · Lightroom · Premiere Pro',
+      deliverables: 'Lead Magazine Photojournalism, Editorial Layouts, Regular Instagram Visuals',
+      role: 'Internship Content Creator & Lead Magazine Photographer',
+      desc: 'Lead photographer for Bandung Creative HUB internal magazine, responsible for capturing creative sector events and developing regular social media content.',
+      solution: 'Delivered high-impact photo stories and consistent social media visual assets across digital and print media, reinforcing Bandung Creative Hub regional brand reputation.'
     },
     p7: {
-      title: 'Soundwave Dynamics',
-      category: 'VIDEO EDITING & MOTION',
-      year: '2026',
-      discipline: 'Music Video & Kinetic Motion',
-      tools: 'After Effects · Cinema 4D · Premiere',
-      deliverables: 'Full Official Music Video, Stage Visuals, Teasers',
-      role: 'Motion Director & Animator',
-      desc: 'Official visualizer and promotional music film for an electronic producer. The project demanded continuous fluid kinetic typography responding organically to 140 BPM audio transients.',
-      solution: 'Built audio-reactive expression rigs in After Effects coupled with 3D camera projection mapping onto abstract geometric planes, creating an illusion of infinite rhythmic perspective.'
+      title: 'STMIK AMIK Bandung Official Video Series',
+      category: 'DIGITAL CONTENT',
+      year: '2023',
+      discipline: 'End-to-End Video Production & Direction',
+      tools: 'Premiere Pro · After Effects · Multi-Camera Studio',
+      deliverables: 'Official YouTube Channel Series, Instagram Reels, Event Documentation',
+      role: 'Content Producer & Video Lead',
+      desc: 'Led full production lifecycle for official STMIK AMIK Bandung YouTube channel and institutional digital marketing campaigns over a 19-month period.',
+      solution: 'Managed concepting, filming, documentary coverage, and post-production color and sound, driving significant increases in institutional audience engagement and social metrics.'
     },
     p8: {
-      title: 'Solaris Biosphere',
-      category: '3D GENERALIST',
-      year: '2025',
-      discipline: '3D Environment Art & Worldbuilding',
-      tools: 'Cinema 4D · Redshift · World Creator',
-      deliverables: '3D Biome Suite, Fly-through Camera Pass, Asset Library',
-      role: 'Lead 3D Environment Artist',
-      desc: 'An extraterrestrial terrain exploration project depicting atmospheric conditions under a binary star system. Balanced speculative botanical geometry with photorealistic geological realism.',
-      solution: 'Sculpted complex procedural mountain ranges and volumetric dust cloud simulations. Optimized multi-million polygon instancing arrays in Redshift with GPU-accelerated raytracing passes.'
+      title: 'BEM STMIK Amik Digital Media Ecosystem',
+      category: 'VISUAL & BRAND DESIGN',
+      year: '2024',
+      discipline: 'Department Leadership & Information Infrastructure',
+      tools: 'Figma · Illustrator · Graphic Systems',
+      deliverables: 'Department Media Guidelines, Public Campaign Graphics, Information Architecture',
+      role: 'Head of Communication & IT Department (BEM)',
+      desc: 'Led and managed the student executive board departmental team focusing on digital communication, campus publications, and media infrastructure.',
+      solution: 'Streamlined design pipelines for social media announcements, graphic publications, and campus outreach, fostering student advocacy and transparent institutional information.'
     },
     'p-feat-1': {
-      title: 'Project Omega: Spatial Interface Engine',
-      category: 'FEATURED DIRECTIVE',
-      year: '2026',
-      discipline: 'Interactive 3D Web & Spatial UI',
-      tools: 'Blender · Three.js · Figma',
-      deliverables: 'WebGL Interactive Showcase, UI Suite, Sound Design',
-      role: 'Lead 3D & UI Designer',
-      desc: 'A groundbreaking web experience built for an electric flagship prototype. Allows visitors to manipulate realistic 3D vehicle geometry, examine aerodynamics through real-time particle streams, and customize spatial interior moods.',
-      solution: 'Pioneered low-draw-call GLTF model compression allowing desktop-grade 3D graphics on mobile browsers at 60 FPS. Combined seamlessly with minimalist editorial layouts.'
+      title: 'Digital Twin NTU WP3 (SCCIC ITB)',
+      category: 'FEATURED RESEARCH',
+      year: '2024',
+      discipline: 'Digital Twin & Advanced 3D Engine Integration',
+      tools: 'Blender · Unity · Unreal Engine',
+      deliverables: 'Real-Time 3D Research Assets, Spatial Geometries, Engine Shaders',
+      role: '3D Artist Intern',
+      desc: 'Pioneering scientific visualization for the Digital Twin NTU WP3 research initiative conducted with Smart City & Community Innovation Center (SCCIC ITB).',
+      solution: 'Accurately modeled complex architectural and functional structures in Blender, optimizing vertex counts and UV layouts for real-time physics and research data rendering in Unreal Engine and Unity.'
     },
     'p-feat-2': {
-      title: 'Vortex: 360° Dynamic Brand Universe',
-      category: 'FEATURED DIRECTIVE',
-      year: '2025',
-      discipline: 'Omnichannel Brand System & Packaging',
-      tools: 'Illustrator · After Effects · Cinema 4D',
-      deliverables: 'Brand System, 3D Mockups, Kinetic Guidelines, Packaging',
-      role: 'Brand Identity & Motion Director',
-      desc: 'Comprehensive brand overhaul for a high-end acoustic engineering studio. The visual system was derived mathematically from resonant sound frequencies and wave physics.',
-      solution: 'Designed an algorithmic logo generator that morphs based on sound input, complemented by sculptural matte-black packaging with debossed acoustic wave patterns.'
+      title: 'Metaverse Balai Kota Bandung & Dago Dipatiukur',
+      category: 'FEATURED METAVERSE',
+      year: '2023',
+      discipline: 'Virtual City & Spatial Computing',
+      tools: 'Blender · Unreal Engine · Spatial Computing',
+      deliverables: 'Civic Metaverse Assets (Phase 1 & 2), Dago Dipatiukur Digital Twin Prototype',
+      role: 'Lead 3D Artist & Researcher',
+      desc: 'Groundbreaking civic metaverse research transforming Bandung historical and administrative landmarks into an interactive virtual twin.',
+      solution: 'Executed photorealistic spatial modeling, PBR material synthesis, and real-time engine staging, successfully translating municipal research into an exploratory virtual realm.'
     },
     'p-feat-3': {
-      title: 'Nebula: Sci-Fi Narrative Trailer',
-      category: 'FEATURED DIRECTIVE',
-      year: '2025',
-      discipline: 'CGI Direction & Visual Effects',
-      tools: 'Blender · Premiere Pro · DaVinci Resolve',
-      deliverables: '3-Minute Narrative Film, FX Breakdown, Sound Design',
-      role: 'Director · 3D Generalist · Sound Designer',
-      desc: 'An ambitious CGI short film exploring isolation aboard an interstellar research vessel navigating a dying nebula. Built from concept sketches to final color delivery over nine months.',
-      solution: 'Modeled detailed spaceship interiors, zero-gravity liquid physics, and nebula gas volumetric lighting. Recognized with awards at digital art film festivals.'
+      title: 'Indonesian Warship AR System (LPPM STMIK)',
+      category: 'FEATURED AUGMENTED REALITY',
+      year: '2023',
+      discipline: 'High-Fidelity AR Military Visualization',
+      tools: 'Blender · AR Frameworks · Substance Texturing',
+      deliverables: 'Scale 3D Warship Assets, Interactive Tactical Breakdowns, Mobile AR App',
+      role: '3D Artist & AR Specialist',
+      desc: 'Large-scale Augmented Reality visualization of the Indonesian Warship (Kapal Perang Indonesia) engineered for educational and institutional research.',
+      solution: 'Constructed an anatomically accurate 3D model with optimized draw calls, layered deck breakdowns, and real-world scale tracking for mobile AR devices.'
     },
     'p-feat-4': {
-      title: 'Aura Mobile OS: Neomorphic UI Suite',
-      category: 'FEATURED DIRECTIVE',
-      year: '2026',
-      discipline: 'Radical Mobile Product Design',
-      tools: 'Figma · Principle · Protopie',
-      deliverables: 'Complete OS Guidelines, 80+ Screens, Interactive Prototypes',
-      role: 'Product Designer',
-      desc: 'A reimagining of modern mobile operating systems that eliminates visual clutter in favor of soft lighting, tangible physics, and intent-driven predictive interfaces.',
-      solution: 'Created an accessible depth model that replaces hard boundaries with organic elevation layers, paired with bespoke typography that enhances readability across varied lighting conditions.'
+      title: 'Urbansolv Integrated 3D & Creative Direction',
+      category: 'FEATURED COMMERCIAL',
+      year: '2025',
+      discipline: 'Senior 3D Generalist & Creative Coordination',
+      tools: 'Blender · Illustrator · Presentation Decks',
+      deliverables: 'Corporate 3D Visuals, Investor Presentation Assets, Social Branding',
+      role: 'Senior 3D Generalist & Creative Coordinator',
+      desc: 'End-to-end creative coordination and 3D visual production for Urbansolv corporate initiatives and high-stake presentations.',
+      solution: 'Served as key coordinator across the creative team, ensuring brand consistency across Instagram campaigns, pitch decks, and architectural 3D visualizations.'
     }
   };
 

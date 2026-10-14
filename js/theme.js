@@ -1,6 +1,6 @@
 /**
  * ============================================================================
- * ADITYA PRATAMA — VISUAL COMMUNICATION DESIGN PORTFOLIO 2026
+ * ADITYA FAZAR SANJAYA — 3D VISUALIZATION & DIGITAL CONTENT CREATION
  * THEME SYSTEM (theme.js)
  * Manages Dark / Light mode switching, persistence & system preferences
  * ============================================================================
